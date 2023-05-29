@@ -52,7 +52,7 @@ class yolodateset(Dataset):
         self.hyp = hyp
         self.rect = rect
         self.augment = augment
-        self.mosaic =  False  #augment and not rect
+        self.mosaic =  augment and not rect
         self.mosaic_border = [-img_size // 2, -img_size // 2]
         self.stride = stride
         
