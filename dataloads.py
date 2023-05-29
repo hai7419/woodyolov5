@@ -329,10 +329,10 @@ class yolodateset(Dataset):
         # img4, labels4, segments4 = copy_paste(img4, labels4, segments4, p=self.hyp['copy_paste'])
         img4, labels4 = randon_perspective(img4,
                                            labels4,
-                                           degrees=0,   #self.hyp['degrees'],# degrees=self.hyp['degrees'],
-                                           translate=0, # self.hyp['translate'],
-                                           scale=0,#self.hyp['scale'],
-                                           shear=0,#self.hyp['shear'],
+                                           degrees=self.hyp['degrees'],# degrees=self.hyp['degrees'],
+                                           translate= self.hyp['translate'],
+                                           scale=self.hyp['scale'],
+                                           shear=self.hyp['shear'],
                                            perspective=0,#self.hyp['perspective'],
                                            border=self.mosaic_border
                                            )  # border to remove
