@@ -94,7 +94,7 @@ def train(hyp, opt, device):
         batch_size=batch_size,
         stride=32,
         hyp=hyp,
-        augment=True,
+        augment=False,
         # cache=None if opt.cache == 'val' else opt.cache,
         pad=0,
         rect=False,
